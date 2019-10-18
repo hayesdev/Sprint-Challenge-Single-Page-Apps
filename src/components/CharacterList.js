@@ -5,12 +5,15 @@ import axios from "axios";
 export default function CharacterList() {
   // // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState([]);
+
+  // *****Creating array of name for search form***** //
   const charArray = [];
   function charMap() {
     characters.map(char => {
       charArray.push(char.name);
     });
   }
+  charMap();
   console.log(charArray);
 
   useEffect(() => {
