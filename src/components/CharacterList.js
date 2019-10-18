@@ -5,6 +5,13 @@ import axios from "axios";
 export default function CharacterList() {
   // // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState([]);
+  const charArray = [];
+  function charMap() {
+    characters.map(char => {
+      charArray.push(char.name);
+    });
+  }
+  console.log(charArray);
 
   useEffect(() => {
     //   // TODO: Add API Request here - must run in `useEffect`
