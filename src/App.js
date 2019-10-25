@@ -1,7 +1,8 @@
 import React from "react";
-import { BrowserRouter as Route, Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import CharacterList from "./components/CharacterList.js";
 import Header from "./components/Header.js";
+import SearchForm from "./components/SearchForm.js";
 import WelcomePage from "./components/WelcomePage.js";
 
 export default function App() {
@@ -9,10 +10,12 @@ export default function App() {
     <main>
       <Header />
       <Link to="/">Home</Link>
-      {/* <Link to="/">Characters</Link> */}
-      <CharacterList />
+      <Link to="/CharacterList">Characters</Link>
+      <Link to="/Search">Search</Link>
 
       <Route exact path="/" component={WelcomePage} />
+      <Route path="/CharacterList" component={CharacterList} />
+      <Route path="/Search" component={SearchForm} />
     </main>
   );
 }
