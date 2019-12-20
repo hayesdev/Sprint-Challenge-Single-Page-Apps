@@ -7,8 +7,8 @@ import WelcomePage from "./WelcomePage.js";
 import CharacterList from "./CharacterList.js";
 
 const Navbar = styled.div`
-  display: grid;
-  justify-content: space-between;
+  display: flex;
+  justify-content: flex-start;
 `;
 
 export function Nav() {

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CharacterCard from "./CharacterCard";
 import axios from "axios";
-import SearchForm from "./SearchForm";
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [data, setData] = useState([]);
@@ -25,7 +24,6 @@ export default function CharacterList() {
           origin={res.origin.name}
         />
       ))}
-      {/* <SearchForm /> */}
     </section>
   );
 }

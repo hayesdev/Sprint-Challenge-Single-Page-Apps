@@ -41,12 +41,11 @@ export default function SearchForm() {
               />
               <h4>{item.name}</h4>
               <p>
-                {item.species} {item.status}{" "}
+                {item.species}, {item.status}
               </p>
             </div>
           ))}
       </ul>
-      {/* <button type="submit">Search</button> */}
     </section>
   );
 }
