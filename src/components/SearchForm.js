@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 export default function SearchForm() {
-  const [searchCharacter, setSearchCharacter] = React.useState("");
-  const [searchResults, setSearchResults] = React.useState([]);
+  const [searchCharacter, setSearchCharacter] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
   const handleChange = event => {
     setSearchCharacter(event.target.value);
   };
@@ -26,7 +26,7 @@ export default function SearchForm() {
     <section className="search-form">
       <input
         type="text"
-        placeholder="search"
+        placeholder="search by name"
         value={searchCharacter}
         onChange={handleChange}
       />
@@ -34,15 +34,18 @@ export default function SearchForm() {
         {searchResults &&
           searchResults.map(item => (
             <div>
-              <img src={item.image} alt={"picture of character"} />
+              <img
+                src={item.image}
+                alt={"picture of character"}
+                key={item.id}
+              />
               <h4>{item.name}</h4>
               <p>
-                {item.species} {item.status}{" "}
+                {item.species}, {item.status}
               </p>
             </div>
           ))}
       </ul>
-      {/* <button type="submit">Search</button> */}
     </section>
   );
 }

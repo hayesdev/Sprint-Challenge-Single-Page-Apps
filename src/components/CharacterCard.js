@@ -8,7 +8,9 @@ const Card = styled.div`
   color: black;
   background: lightblue;
   margin: 10px;
+  padding: 0;
   border-radius: 20px;
+  text-align: center;
 `;
 
 export default function CharacterCard(props) {
@@ -16,8 +18,10 @@ export default function CharacterCard(props) {
     <div className="character-card" key={props.id}>
       <Card>
         <h2>{props.name}</h2>
+        <h3>Species: {props.species}</h3>
+        <p>Origin: {props.origin}</p>
         <p>Status: {props.status}</p>
-        <p>Species: {props.species}</p>
+        <p></p>
       </Card>
     </div>
   );
